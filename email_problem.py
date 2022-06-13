@@ -31,7 +31,7 @@ current_date_time = "Current date and time: " + date_time.strftime('%m/%d/%Y %I:
 emails_list = "" 
 count = 0
 for message in delta_date_time:
-   if message.subject.startswith("Error"):
+   if message.SenderEmailAddress == "jblakely@barnetproducts.com":
       count += 1
       emails_list += ''.join(message.subject + ": " + message.SenderEmailAddress + ": " + message.ReceivedTime.strftime('%I:%M %p') + '\n')
 emails_list = emails_list + "\nTotal number: " + str(count)
